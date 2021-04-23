@@ -3,7 +3,8 @@ Facilita o lançamento de presenças e notas no sistema SIGA do IFTO
 
 Requisitos
 --
-Para utilizar o plugin você deve instalar antes o navegador Mozilla Firefox. Eu recomendo a versão Developer, você pode obtê-la [clicando aqui](https://www.mozilla.org/pt-BR/firefox/developer).
+Para utilizar o plugin você vai precisar do navegador Mozilla Firefox.
+Eu recomendo a versão Developer, você pode obtê-la [clicando aqui](https://www.mozilla.org/pt-BR/firefox/developer).
 
 Download
 --
