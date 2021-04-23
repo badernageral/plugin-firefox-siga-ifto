@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "SIGA IFTO",
+    "version": "1.0",
+    "description": "Facilita lançar presenças e notas no SIGA",
+    "homepage_url": "https://github.com/badernageral",
+    "icons": {
+        "48": "icons/plugin-48.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "page_action": {
+        "default_icon": "icons/plugin-48.png",
+        "default_title": "SIGA",
+        "default_popup": "popup/home.html",
+        "show_matches": [
+            "https://*.ifto.edu.br/*"
+        ]
+    }
+
+}

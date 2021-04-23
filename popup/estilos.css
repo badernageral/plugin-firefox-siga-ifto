@@ -1,0 +1,23 @@
+body {
+    background-color: gray;
+    padding: 0 5px;
+    width: 90%;
+    text-align: center;
+}
+a{
+    display: block;
+    margin: 5px 0;
+}
+p{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5px;
+}
+textarea {
+    width: 300px !important;
+    height: 100px;
+    margin-bottom: 5px;
+}
+a button{
+    width: 100%;
+}
