@@ -12,4 +12,4 @@ Você pode fazer download da extensão [clicando aqui](https://github.com/badern
 
 Tutorial
 --
-[![Tutorial](https://img.youtube.com/vi/ALQC1PhgVnI/0.jpg)](https://www.youtube.com/watch?v=ALQC1PhgVnI)
+[![Tutorial](https://img.youtube.com/vi/ALQC1PhgVnI/1.jpg)](https://www.youtube.com/watch?v=ALQC1PhgVnI)
