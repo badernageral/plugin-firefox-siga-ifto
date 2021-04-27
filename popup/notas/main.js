@@ -10,6 +10,9 @@ document.addEventListener("click", function (e) {
 			for(i=1; i<3; i++){
 				if (lista[j][i] != undefined) {
 					var nota = lista[j][i].replace(",",".");
+					if(lista[j][i]=="-"){
+						lista[j][i] = "0";
+					}
 					if (nota > 10) {
 						alert("Você não pode informar notas maiores que 10!");
 						return;
