@@ -7,16 +7,16 @@ document.addEventListener("click", function (e) {
 			lista.push(item.trim().split(/\s+/));
 		});
 		for (j = 0; j < lista.length; j++) {
-			if(lista[j][1]>10){
-				alert("Você não pode informar notas maiores que 10!");
-				return;
-			}
-			if(lista[j][2]!=undefined){
-				if (lista[0][2] > 10) {
-					alert("Você não pode informar notas maiores que 10!");
-					return;
+			for(i=1; i<3; i++){
+				if (lista[j][i] != undefined) {
+					var nota = lista[j][i].replace(",",".");
+					if (nota > 10) {
+						alert("Você não pode informar notas maiores que 10!");
+						return;
+					}
 				}
 			}
+			
 		}
 		let executando = browser.tabs.executeScript({
 			file: "magic.js"
