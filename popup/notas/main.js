@@ -7,7 +7,7 @@ document.addEventListener("click", function (e) {
 			lista.push(item.trim().split(/\s+/));
 		});
 		for (j = 0; j < lista.length; j++) {
-			for(i=1; i<3; i++){
+			for (i = 1; i < lista[j].length; i++){
 				if (lista[j][i] != undefined) {
 					var nota = lista[j][i].replace(",",".");
 					if(lista[j][i]=="-"){
