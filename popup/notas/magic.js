@@ -17,17 +17,23 @@
 			var qtd_encontrado = 0;
 			for (var i = 0; i < spans.length; i++) {
 				if (spans[i].value.toLowerCase().indexOf(alunos[j][0].trim().toLowerCase()) > -1) {
-					varcheck1 = spans[i].parentNode.parentNode.childNodes[3].childNodes[0];
-					varcheck2 = spans[i].parentNode.parentNode.childNodes[5].childNodes[0];
-					varcheck3 = spans[i].parentNode.parentNode.childNodes[7].childNodes[0];
-					if (varcheck1 != undefined) {
-						varcheck1.value = alunos[j][1];
+					if (alunos[j][1] != undefined){
+						varcheck1 = spans[i].parentNode.parentNode.childNodes[3].childNodes[0];
+						if (varcheck1 != undefined) {
+							varcheck1.value = alunos[j][1];
+						}
 					}
-					if (varcheck2 != undefined && alunos[j][2] != undefined) {
-						varcheck2.value = alunos[j][2];
+					if (alunos[j][2] != undefined) {
+						varcheck1 = spans[i].parentNode.parentNode.childNodes[5].childNodes[0];
+						if (varcheck1 != undefined) {
+							varcheck1.value = alunos[j][2];
+						}
 					}
-					if (varcheck3 != undefined && alunos[j][3] != undefined) {
-						varcheck3.value = alunos[j][3];
+					if (alunos[j][3] != undefined) {
+						varcheck1 = spans[i].parentNode.parentNode.childNodes[7].childNodes[0];
+						if (varcheck1 != undefined) {
+							varcheck1.value = alunos[j][3];
+						}
 					}
 					alunos_encontrados++;
 					qtd_encontrado++;
