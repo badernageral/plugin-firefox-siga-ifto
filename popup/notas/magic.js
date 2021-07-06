@@ -35,6 +35,24 @@
 							varcheck1.value = alunos[j][3];
 						}
 					}
+					if (alunos[j][4] != undefined) {
+						varcheck1 = spans[i].parentNode.parentNode.childNodes[9].childNodes[0];
+						if (varcheck1 != undefined) {
+							varcheck1.value = alunos[j][4];
+						}
+					}
+					if (alunos[j][5] != undefined) {
+						varcheck1 = spans[i].parentNode.parentNode.childNodes[11].childNodes[0];
+						if (varcheck1 != undefined) {
+							varcheck1.value = alunos[j][5];
+						}
+					}
+					if (alunos[j][6] != undefined) {
+						varcheck1 = spans[i].parentNode.parentNode.childNodes[13].childNodes[0];
+						if (varcheck1 != undefined) {
+							varcheck1.value = alunos[j][6];
+						}
+					}
 					alunos_encontrados++;
 					qtd_encontrado++;
 					encontrou = true;
