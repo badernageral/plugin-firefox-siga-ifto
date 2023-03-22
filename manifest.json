@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "SIGA IFTO",
-    "version": "1.1.7",
-    "description": "Facilita lançar presenças e notas no SIGA",
+    "name": "SUAP IFTO",
+    "version": "1.1.9",
+    "description": "Facilita lançar presenças e notas no SUAP",
     "homepage_url": "https://github.com/badernageral",
     "icons": {
         "48": "icons/plugin-48.png"
@@ -12,7 +12,7 @@
     ],
     "page_action": {
         "default_icon": "icons/plugin-48.png",
-        "default_title": "SIGA",
+        "default_title": "SUAP",
         "default_popup": "popup/home.html",
         "show_matches": [
             "https://*.ifto.edu.br/*"

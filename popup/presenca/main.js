@@ -2,7 +2,10 @@
 document.addEventListener("click", function (e) {
 	
 	if(e.target.id=="botao"){
-		var lista = document.getElementById("lista").value.trim().split("\n");
+		var lista = [];
+		document.getElementById("lista").value.trim().split("\n").forEach(function (item, indice, array) {
+			lista.push(item.trim().split(/\s+/));
+		});
 		let executando = browser.tabs.executeScript({
 			file: "magic.js"
 		});

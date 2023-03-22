@@ -1,5 +1,5 @@
-# Plugin para firefox - SIGA IFTO
-Facilita o lançamento de presenças e notas no sistema SIGA do IFTO
+# Plugin para firefox - SUAP IFTO
+Facilita o lançamento de presenças e notas no sistema SUAP do IFTO
 
 Requisitos
 --

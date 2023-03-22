@@ -11,46 +11,17 @@
 		var alunos_nao_encontrados = "";
 		var alunos_duplicados = "";
 		var alunos_encontrados = 0;
-		var spans = document.querySelectorAll("input[type='hidden']");
+		var matriculas = document.querySelector("#table_notas").childNodes[1].childNodes;
 		for (j = 0; j < alunos.length; j++) {
 			var encontrou = false;
 			var qtd_encontrado = 0;
-			for (var i = 0; i < spans.length; i++) {
-				if (spans[i].value.toLowerCase().indexOf(alunos[j][0].trim().toLowerCase()) > -1) {
-					if (alunos[j][1] != undefined){
-						varcheck1 = spans[i].parentNode.parentNode.childNodes[3].childNodes[0];
-						if (varcheck1 != undefined) {
-							varcheck1.value = alunos[j][1];
-						}
-					}
-					if (alunos[j][2] != undefined) {
-						varcheck1 = spans[i].parentNode.parentNode.childNodes[5].childNodes[0];
-						if (varcheck1 != undefined) {
-							varcheck1.value = alunos[j][2];
-						}
-					}
-					if (alunos[j][3] != undefined) {
-						varcheck1 = spans[i].parentNode.parentNode.childNodes[7].childNodes[0];
-						if (varcheck1 != undefined) {
-							varcheck1.value = alunos[j][3];
-						}
-					}
-					if (alunos[j][4] != undefined) {
-						varcheck1 = spans[i].parentNode.parentNode.childNodes[9].childNodes[0];
-						if (varcheck1 != undefined) {
-							varcheck1.value = alunos[j][4];
-						}
-					}
-					if (alunos[j][5] != undefined) {
-						varcheck1 = spans[i].parentNode.parentNode.childNodes[11].childNodes[0];
-						if (varcheck1 != undefined) {
-							varcheck1.value = alunos[j][5];
-						}
-					}
-					if (alunos[j][6] != undefined) {
-						varcheck1 = spans[i].parentNode.parentNode.childNodes[13].childNodes[0];
-						if (varcheck1 != undefined) {
-							varcheck1.value = alunos[j][6];
+			for (var i = 0; i < matriculas.length; i++) {
+				if (matriculas[i].childNodes[1].childNodes[1].childNodes[1].childNodes[1].innerHTML.trim().toLowerCase()==alunos[j][0].trim().toLowerCase()) {
+					var notas = matriculas[i].querySelectorAll("input");
+					for(var k=0;k<notas.length;k++){
+						if (alunos[j][k+1] != undefined){
+							notas[k].value = alunos[j][k+1];
+							notas[k].dispatchEvent(new Event('blur'));
 						}
 					}
 					alunos_encontrados++;

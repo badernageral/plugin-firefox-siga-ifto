@@ -8,29 +8,31 @@
 
 	function mensagemRecebida(request, sender, sendResponse) {
 		alunos = request.mensagem;
-		var checkboxes = document.querySelectorAll("input[type='text']");
-		for (var i = 0; i < checkboxes.length; i++) {
-			checkboxes[i].value = "0";
-		}
-		var quantidade_aulas = checkboxes[0].parentNode.innerHTML.match(/de (\d+)/)[1];
+		var quantidade_aulas = document.querySelector("#table_faltas").childNodes[0].childNodes[0].childNodes[1].childNodes[1].innerHTML.match(/(\d+)/)[0];
 		var alunos_nao_encontrados = "";
 		var alunos_duplicados = "";
 		var alunos_encontrados = 0;
 		var presenca = 0;
 		var falta = 0;
-		var spans = document.querySelectorAll("input[type='hidden']");
+		var matriculas = document.querySelectorAll(".hide-sm");
 		for (j = 0; j < alunos.length; j++) {
 			var encontrou = false;
 			var qtd_encontrado = 0;
-			for (var i = 0; i < spans.length; i++) {
-				if (spans[i].value.toLowerCase().indexOf(alunos[j][0].trim().toLowerCase()) > -1) {
+			for (var i = 0; i < matriculas.length; i++) {
+				if (matriculas[i].children[0].innerHTML.trim().toLowerCase()==alunos[j][0].trim().toLowerCase()) {
 					if (alunos[j][1].trim() == "-") {
 						falta++;
 					} else {
 						presenca++;
-						varcheck1 = spans[i].parentNode.parentNode.parentNode.childNodes[5].childNodes[0];
-						if (varcheck1 != undefined) {
-							varcheck1.value = quantidade_aulas;
+					}
+					var notas = matriculas[i].parentNode.parentNode.querySelectorAll("td.text-center");
+					for(var k=0;k<notas.length;k++){
+						if (alunos[j][k+1] != undefined){
+							if (alunos[j][k+1].trim() == "-") {
+								notas[k].childNodes[0].childNodes[0].value = quantidade_aulas;
+							} else {
+								notas[k].childNodes[0].childNodes[0].value = "0";
+							}
 						}
 					}
 					alunos_encontrados++;
