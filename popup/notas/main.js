@@ -13,8 +13,8 @@ document.addEventListener("click", function (e) {
 					if(lista[j][i]=="-"){
 						lista[j][i] = "0";
 					}
-					if (nota > 10) {
-						alert("Você não pode informar notas maiores que 10!");
+					if (nota > 100) {
+						alert("Você não pode informar notas maiores que 100!");
 						return;
 					}
 				}
