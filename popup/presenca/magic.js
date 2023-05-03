@@ -8,7 +8,7 @@
 
 	function mensagemRecebida(request, sender, sendResponse) {
 		alunos = request.mensagem;
-		var quantidade_aulas = document.querySelector("#table_faltas").childNodes[0].childNodes[0].childNodes[1].childNodes[1].innerHTML.match(/(\d+)/)[0];
+		
 		var alunos_nao_encontrados = "";
 		var alunos_duplicados = "";
 		var alunos_encontrados = 0;
@@ -29,6 +29,7 @@
 					for(var k=0;k<notas.length;k++){
 						if (alunos[j][k+1] != undefined){
 							if (alunos[j][k+1].trim() == "-") {
+								let quantidade_aulas = document.querySelector("#table_faltas").childNodes[0].childNodes[0].childNodes[k+1].childNodes[1].innerHTML.match(/(\d+)/)[0];
 								notas[k].childNodes[0].childNodes[0].value = quantidade_aulas;
 							} else {
 								notas[k].childNodes[0].childNodes[0].value = "0";
