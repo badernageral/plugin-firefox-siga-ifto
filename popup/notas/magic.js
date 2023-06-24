@@ -11,22 +11,25 @@
 		var alunos_nao_encontrados = "";
 		var alunos_duplicados = "";
 		var alunos_encontrados = 0;
-		var matriculas = document.querySelector("#table_notas").childNodes[1].childNodes;
+		var tabelas = document.querySelectorAll("#table_notas");
 		for (j = 0; j < alunos.length; j++) {
 			var encontrou = false;
 			var qtd_encontrado = 0;
-			for (var i = 0; i < matriculas.length; i++) {
-				if (matriculas[i].childNodes[1].childNodes[1].childNodes[1].childNodes[1].innerHTML.trim().toLowerCase()==alunos[j][0].trim().toLowerCase()) {
-					var notas = matriculas[i].querySelectorAll("input");
-					for(var k=0;k<notas.length;k++){
-						if (alunos[j][k+1] != undefined){
-							notas[k].value = alunos[j][k+1];
-							notas[k].dispatchEvent(new Event('blur'));
+			for (var q = 0; q < tabelas.length; q++) {
+				matriculas = tabelas[q].childNodes[1].childNodes;
+				for (var i = 0; i < matriculas.length; i++) {
+					if (matriculas[i].childNodes[1].childNodes[1].childNodes[1].childNodes[1].innerHTML.trim().toLowerCase()==alunos[j][0].trim().toLowerCase()) {
+						var notas = matriculas[i].querySelectorAll("input");
+						for(var k=0;k<notas.length;k++){
+							if (alunos[j][k+1] != undefined){
+								notas[k].value = alunos[j][k+1];
+								notas[k].dispatchEvent(new Event('blur'));
+							}
 						}
+						alunos_encontrados++;
+						qtd_encontrado++;
+						encontrou = true;
 					}
-					alunos_encontrados++;
-					qtd_encontrado++;
-					encontrou = true;
 				}
 			}
 			if (qtd_encontrado > 1) {

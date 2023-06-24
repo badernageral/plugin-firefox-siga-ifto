@@ -34,6 +34,7 @@
 							} else {
 								notas[k].childNodes[0].childNodes[0].value = "0";
 							}
+							notas[k].childNodes[0].childNodes[0].dispatchEvent(new Event('blur'));
 						}
 					}
 					alunos_encontrados++;
