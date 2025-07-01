@@ -16,10 +16,10 @@
 			var encontrou = false;
 			var qtd_encontrado = 0;
 			for (var q = 0; q < tabelas.length; q++) {
-				matriculas = tabelas[q].childNodes[1].childNodes;
+				matriculas = tabelas[q].querySelectorAll("dd a");
 				for (var i = 0; i < matriculas.length; i++) {
-					if (matriculas[i].childNodes[1].childNodes[1].childNodes[1].childNodes[1].innerHTML.trim().toLowerCase()==alunos[j][0].trim().toLowerCase()) {
-						var notas = matriculas[i].querySelectorAll("input");
+					if (matriculas[i].innerHTML.trim().toLowerCase()==alunos[j][0].trim().toLowerCase()) {
+						var notas = matriculas[i].parentNode.parentNode.parentNode.parentNode.querySelectorAll("input.int:not(.disabled-input)");
 						for(var k=0;k<notas.length;k++){
 							if (alunos[j][k+1] != undefined){
 								notas[k].value = alunos[j][k+1];
