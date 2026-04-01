@@ -30,13 +30,13 @@
 							}else{
 								if (alunos[j][k+1].trim() == "-") {
 									let quantidade_aulas = document.querySelector("#table_faltas").childNodes[0].childNodes[0].childNodes[k+1].childNodes[1].innerHTML.match(/(\d+)/)[0];
-									notas[k].childNodes[0].childNodes[0].value = quantidade_aulas;
+									notas[k].childNodes[0].childNodes[0].childNodes[0].value = quantidade_aulas;
 									falta++;
 								} else {
-									notas[k].childNodes[0].childNodes[0].value = "0";
+									notas[k].childNodes[0].childNodes[0].childNodes[0].value = "0";
 									presenca++;
 								}
-								notas[k].childNodes[0].childNodes[0].dispatchEvent(new Event('blur'));
+								notas[k].childNodes[0].childNodes[0].childNodes[0].dispatchEvent(new Event('blur'));
 							}
 						}
 					}

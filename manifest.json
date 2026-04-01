@@ -1,12 +1,17 @@
 {
     "manifest_version": 2,
     "name": "SUAP IFTO",
-    "version": "1.3.4",
+    "version": "1.3.6",
     "description": "Facilita lançar presenças e notas no SUAP",
     "homepage_url": "https://github.com/badernageral",
     "icons": {
         "48": "icons/plugin-48.png"
     },
+    "browser_specific_settings": {
+    "gecko": {
+      "id": "badernageral@hotmail.com"
+    }
+  },
     "permissions": [
         "activeTab"
     ],
